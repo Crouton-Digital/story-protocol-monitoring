@@ -42,9 +42,9 @@ docker compose up -d
 2. Login using defaults admin/admin and change password
 ![grafana_login_02.png](docs%2Fimages%2Fgrafana_login_02.png)
 
-3. Go to Dashboard
-Validator stats - information about validator such as rank, bounded tokens, comission, delegations and rewards
-![dashboard01.png](docs%2Fimages%2Fdashboard01.png)
+3. Go to Dashboard  
+Validator stats - information about validator such as rank, bounded tokens, comission, delegations and rewards  
+![dashboard01.png](docs%2Fimages%2Fdashboard01.png)  
 
-Hardware health - system hardware metrics. cpu, ram, network usage
-![dashboard02.png](docs%2Fimages%2Fdashboard02.png)
+Hardware health - system hardware metrics. cpu, ram, network usage  
+![dashboard02.png](docs%2Fimages%2Fdashboard02.png)  
