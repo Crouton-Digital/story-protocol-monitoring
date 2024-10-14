@@ -7,7 +7,7 @@ You need installed docker engine on server before got to next step:
 ## Install monitoring for story
 
 ```bash
-wget -O install.sh https://raw.githubusercontent.com/Crouton-Digital/story-monitoring/refs/heads/main/install.sh && chmod +x install.sh && ./install.sh
+wget -O install.sh https://raw.githubusercontent.com/Crouton-Digital/story-monitoring/refs/heads/main/install.sh && chmod +x install.sh && sudo ./install.sh
 ```
 
 ## Configuration 
