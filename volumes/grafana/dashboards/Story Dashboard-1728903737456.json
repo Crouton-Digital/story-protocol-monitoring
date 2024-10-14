@@ -592,6 +592,34 @@
                 }
               }
             ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Value #G"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 140
+              },
+              {
+                "id": "displayName",
+                "value": "Blocks signed"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Jailed"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 80
+              }
+            ]
           }
         ]
       },
@@ -705,6 +733,21 @@
           "instant": true,
           "range": false,
           "refId": "C"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "max(cosmos_validator_watcher_validated_blocks{chain_id=\"$chain_id\"}) by (name)",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "legendFormat": "__auto",
+          "range": false,
+          "refId": "G"
         }
       ],
       "title": "Validators Stats",
@@ -1104,13 +1147,6 @@
                 "value": 137
               }
             ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "node"
-            },
-            "properties": []
           },
           {
             "matcher": {
@@ -4013,8 +4049,8 @@
       {
         "current": {
           "selected": false,
-          "text": "node-exporter",
-          "value": "node-exporter"
+          "text": "story-node-exporter",
+          "value": "story-node-exporter"
         },
         "datasource": {
           "type": "prometheus",
