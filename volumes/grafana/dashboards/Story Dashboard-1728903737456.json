@@ -3962,30 +3962,7 @@
     "list": [
       {
         "current": {
-          "selected": false,
-          "text": "node-exporter",
-          "value": "node-exporter"
-        },
-        "definition": "label_values(node_uname_info,job)",
-        "hide": 0,
-        "includeAll": false,
-        "multi": false,
-        "name": "job",
-        "options": [],
-        "query": {
-          "qryType": 1,
-          "query": "label_values(node_uname_info,job)",
-          "refId": "PrometheusVariableQueryEditor-VariableQuery"
-        },
-        "refresh": 1,
-        "regex": "",
-        "skipUrlSync": false,
-        "sort": 0,
-        "type": "query"
-      },
-      {
-        "current": {
-          "selected": false,
+          "selected": true,
           "text": "Prometheus",
           "value": "PBFA97CFB590B2093"
         },
@@ -4005,29 +3982,28 @@
       {
         "current": {
           "selected": false,
-          "text": "iliad-0",
-          "value": "iliad-0"
+          "text": "node-exporter",
+          "value": "node-exporter"
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "${DS_PROMETHEUS}"
+          "uid": "PBFA97CFB590B2093"
         },
-        "definition": "label_values(cosmos_validator_watcher_block_height,chain_id)",
+        "definition": "label_values(node_uname_info,job)",
         "hide": 0,
         "includeAll": false,
-        "label": "Chain ID",
         "multi": false,
-        "name": "chain_id",
+        "name": "job",
         "options": [],
         "query": {
           "qryType": 1,
-          "query": "label_values(cosmos_validator_watcher_block_height,chain_id)",
+          "query": "label_values(node_uname_info,job)",
           "refId": "PrometheusVariableQueryEditor-VariableQuery"
         },
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
-        "sort": 1,
+        "sort": 0,
         "type": "query"
       },
       {
@@ -4057,6 +4033,34 @@
         "skipUrlSync": false,
         "sort": 0,
         "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "iliad-0",
+          "value": "iliad-0"
+        },
+        "datasource": {
+          "type": "prometheus",
+          "uid": "${DS_PROMETHEUS}"
+        },
+        "definition": "label_values(cosmos_validator_watcher_block_height,chain_id)",
+        "hide": 0,
+        "includeAll": false,
+        "label": "Chain ID",
+        "multi": false,
+        "name": "chain_id",
+        "options": [],
+        "query": {
+          "qryType": 1,
+          "query": "label_values(cosmos_validator_watcher_block_height,chain_id)",
+          "refId": "PrometheusVariableQueryEditor-VariableQuery"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 1,
+        "type": "query"
       }
     ]
   },
@@ -4068,6 +4072,6 @@
   "timezone": "",
   "title": "Story Dashboard",
   "uid": "cb1315c0-64f9-4d53-96fb-c3dd20174bd4",
-  "version": 2,
+  "version": 1,
   "weekStart": ""
 }
