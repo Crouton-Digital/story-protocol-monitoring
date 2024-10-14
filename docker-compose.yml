@@ -168,16 +168,4 @@ networks:
   monitoring:
     name: monitoring
 
-#volumes:
-#  prometheus_etc:
-#    driver: local
-#    driver_opts:
-#      type: none
-#      o: bind
-#      device: /opt/services/story-monitoring/volumes/prometheus_etc
-#  prometheus_data:
-#    driver: local
-#    driver_opts:
-#      type: none
-#      o: bind
-#      device: /opt/services/story-monitoring/volumes/prometheus_disk
+
