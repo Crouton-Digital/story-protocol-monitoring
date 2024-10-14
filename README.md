@@ -37,12 +37,15 @@ docker compose up -d
 
 ### Configure Grafana
 1. Open Grafana in your web browser. It should be available on port 3000
+
 ![grafana_login_01.png](docs%2Fimages%2Fgrafana_login_01.png)
 
 2. Login using defaults admin/admin and change password
+
 ![grafana_login_02.png](docs%2Fimages%2Fgrafana_login_02.png)
 
 3. Go to Dashboard  
+
 Validator stats - information about validator such as rank, bounded tokens, comission, delegations and rewards  
 ![dashboard01.png](docs%2Fimages%2Fdashboard01.png)  
 
