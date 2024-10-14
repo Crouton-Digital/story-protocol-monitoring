@@ -151,13 +151,13 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "max(increase(cosmos_validator_watcher_block_height{chain_id=\"$chain_id\"}[10m])) by (chain_id) / 10",
+          "expr": "60 / (max(increase(cosmos_validator_watcher_block_height{chain_id=\"$chain_id\"}[10m])) by (chain_id) / 10)",
           "instant": false,
           "range": true,
           "refId": "A"
         }
       ],
-      "title": "Block / min",
+      "title": "Block / sec",
       "type": "stat"
     },
     {
@@ -1083,13 +1083,44 @@
               },
               {
                 "id": "displayName",
-                "value": "Block Rate"
+                "value": "Block Rate per sec"
               },
               {
                 "id": "custom.cellOptions",
                 "value": {
                   "type": "color-background"
                 }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Synced"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 137
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "node"
+            },
+            "properties": []
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Block Rate per sec"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 166
               }
             ]
           }
@@ -1138,7 +1169,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "max(increase(cosmos_validator_watcher_node_block_height{chain_id=\"$chain_id\"}[5m])) by (node) / 5",
+          "expr": "60 / (max(increase(cosmos_validator_watcher_node_block_height{chain_id=\"$chain_id\"}[5m])) by (node) / 5)",
           "format": "table",
           "instant": true,
           "range": false,
@@ -3962,7 +3993,7 @@
     "list": [
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "Prometheus",
           "value": "PBFA97CFB590B2093"
         },
@@ -4065,7 +4096,7 @@
     ]
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {},
