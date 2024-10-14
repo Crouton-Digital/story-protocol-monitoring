@@ -2,17 +2,17 @@
 name: monitoring
 
 services:
-  cosmos-validator-watcher:
+  story-validator-exporter:
     image: ghcr.io/crouton-digital/story-validator-exporter:v0.12.2
     container_name: cosmos-validator-watcher
     labels:
       network: "mainnet"
-      #entrypoint: tail -f /dev/null
     command: >
       --log-level debug
+      --validator BAED8E3FAD9FD20457EA2AD53A631AFAA6477F3A:CroutonDigital
+      --node http://127.0.0.1:1317
       --node https://story-testnet-rpc.validator247.com
       --node https://story-testnet-rpc.itrocket.net
-      --validator BAED8E3FAD9FD20457EA2AD53A631AFAA6477F3A:CroutonDigital
     ports:
       - "8080:8080"
     networks:
