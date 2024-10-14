@@ -1,8 +1,5 @@
 # story-monitoring
 
-## Story validator exporter 
-https://github.com/Crouton-Digital/story-validator-exporter
-
 ## Install Docker Engine 
 You need installed docker engine on server before got to next step:
 [How to install docker](https://docs.docker.com/engine/install/ubuntu/)
@@ -58,3 +55,7 @@ cd /opt/story-monitoring/
 docker-compose down
 docker volume prune -f
 ```
+
+## Reference list
+Resources we used in this project:
+* Story validator exporter: (https://github.com/Crouton-Digital/story-validator-exporter)
