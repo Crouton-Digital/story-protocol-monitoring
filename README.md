@@ -26,7 +26,7 @@ Edit docker-compose.yml, need enter you validator address and node rpc url
     command: >
       --log-level debug
       --validator BAED8E3FAD9FD20457EA2AD53A631AFAA6477F3A:CroutonDigital  # Replace to your validator address 
-      --node http://127.0.0.1:1317  # Replace to your node rpc url 
+      --node http://127.0.0.1:26657  # Replace to your node rpc url 
       --node https://story-testnet-rpc.validator247.com
       --node https://story-testnet-rpc.itrocket.net
 ```
