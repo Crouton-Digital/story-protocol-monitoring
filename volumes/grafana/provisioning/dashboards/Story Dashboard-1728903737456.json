@@ -1,4 +1,47 @@
 {
+  "__inputs": [
+    {
+      "name": "DS_PROMETHEUS",
+      "label": "Prometheus",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "prometheus",
+      "pluginName": "Prometheus"
+    }
+  ],
+  "__elements": {},
+  "__requires": [
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "10.2.0"
+    },
+    {
+      "type": "datasource",
+      "id": "prometheus",
+      "name": "Prometheus",
+      "version": "1.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "stat",
+      "name": "Stat",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "table",
+      "name": "Table",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "timeseries",
+      "name": "Time series",
+      "version": ""
+    }
+  ],
   "annotations": {
     "list": [
       {
@@ -18,7 +61,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
-  "id": 3,
+  "id": null,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -35,7 +78,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -307,7 +350,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "${DS_PROMETHEUS}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -321,7 +364,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "${DS_PROMETHEUS}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -335,7 +378,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "${DS_PROMETHEUS}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -349,7 +392,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "${DS_PROMETHEUS}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -363,7 +406,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "${DS_PROMETHEUS}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -377,7 +420,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "${DS_PROMETHEUS}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -401,7 +444,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "fieldConfig": {
             "defaults": {
@@ -572,7 +615,7 @@
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "${DS_PROMETHEUS}"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -626,7 +669,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -672,7 +715,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "max(cosmos_validator_watcher_block_height{chain_id=\"$chain_id\"})",
@@ -687,7 +730,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -737,7 +780,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "max(increase(cosmos_validator_watcher_block_height{chain_id=\"$chain_id\"}[10m])) by (chain_id) / 10",
@@ -752,7 +795,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -798,7 +841,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "max(cosmos_validator_watcher_active_set{chain_id=\"$chain_id\"})",
@@ -813,7 +856,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -860,7 +903,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "sum(cosmos_validator_watcher_tokens{chain_id=\"$chain_id\"})",
@@ -875,7 +918,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -921,7 +964,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "max(cosmos_validator_watcher_seat_price{chain_id=\"$chain_id\"})",
@@ -950,7 +993,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -958,7 +1001,7 @@
             "mode": "thresholds"
           },
           "mappings": [],
-          "noValue": "N/A",
+          "noValue": "---",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1002,7 +1045,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "max(cosmos_validator_watcher_upgrade_plan{chain_id=\"$chain_id\"}) by (chain_id)",
@@ -1018,7 +1061,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1070,7 +1113,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "max(cosmos_validator_watcher_upgrade_plan{chain_id=\"$chain_id\"}) by (version)",
@@ -1088,7 +1131,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1096,7 +1139,7 @@
             "mode": "thresholds"
           },
           "mappings": [],
-          "noValue": "N/A",
+          "noValue": "---",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1140,7 +1183,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "1000*\n(time() +\n(\n    max(cosmos_validator_watcher_upgrade_plan{chain_id=\"$chain_id\"}) by (chain_id) - \n    max(cosmos_validator_watcher_block_height{chain_id=\"$chain_id\"}) by (chain_id)\n) \n/\nsum(predict_linear(cosmos_validator_watcher_block_height{chain_id=\"$chain_id\"}[5h], 5*60) - cosmos_validator_watcher_block_height{chain_id=\"$chain_id\"}) by (chain_id) \n* 5*60)",
@@ -1156,7 +1199,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1164,7 +1207,7 @@
             "mode": "thresholds"
           },
           "mappings": [],
-          "noValue": "N/A",
+          "noValue": "---",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1208,7 +1251,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "(\n    max(cosmos_validator_watcher_upgrade_plan{chain_id=\"$chain_id\"}) by (chain_id) - \n    max(cosmos_validator_watcher_block_height{chain_id=\"$chain_id\"}) by (chain_id)\n) \n/\nsum(predict_linear(cosmos_validator_watcher_block_height{chain_id=\"$chain_id\"}[10h], 10*60) - cosmos_validator_watcher_block_height{chain_id=\"$chain_id\"}) by (chain_id) \n* 10*60",
@@ -1235,7 +1278,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1499,7 +1542,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1513,7 +1556,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1527,7 +1570,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1541,7 +1584,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1555,7 +1598,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1569,7 +1612,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -1593,7 +1636,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1675,7 +1718,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "100 * \nsum(rate(cosmos_validator_watcher_validated_blocks{chain_id=\"$chain_id\"}[5m])) by (name)\n/ on(instance) group_left()\nsum(rate(cosmos_validator_watcher_tracked_blocks{chain_id=\"$chain_id\"}[5m]))",
@@ -1690,7 +1733,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1770,7 +1813,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "max(increase(cosmos_validator_watcher_solo_missed_blocks{chain_id=\"$chain_id\"}[30s])) by (name)",
@@ -1785,7 +1828,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1866,7 +1909,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "max(increase(cosmos_validator_watcher_block_height{chain_id=\"$chain_id\"}[10m])) by (chain_id) / 10",
@@ -1881,7 +1924,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1994,7 +2037,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -2008,7 +2051,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -2031,7 +2074,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -2174,7 +2217,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -2202,14 +2245,10 @@
   "templating": {
     "list": [
       {
-        "current": {
-          "selected": false,
-          "text": "iliad-0",
-          "value": "iliad-0"
-        },
+        "current": {},
         "datasource": {
           "type": "prometheus",
-          "uid": "PBFA97CFB590B2093"
+          "uid": "${DS_PROMETHEUS}"
         },
         "definition": "label_values(cosmos_validator_watcher_block_height,chain_id)",
         "hide": 0,
@@ -2232,13 +2271,13 @@
     ]
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Story Dashboard",
   "uid": "cb1315c0-64f9-4d53-96fb-c3dd20174bd4",
-  "version": 3,
+  "version": 4,
   "weekStart": ""
 }
