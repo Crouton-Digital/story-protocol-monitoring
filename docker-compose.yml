@@ -126,7 +126,7 @@ services:
     image: grafana/grafana:10.2.0
     container_name: grafana
     volumes:
-      - grafana_data:/var/lib/grafana
+#      - grafana_data:/var/lib/grafana
       - ./volumes/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
       - ./volumes/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
     environment:
@@ -181,12 +181,12 @@ volumes:
       type: none
       o: bind
       device: /opt/services/story-monitoring/volumes/prometheus_disk
-  grafana_data:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: /opt/services/story-monitoring/volumes/grafana_disk
+#  grafana_data:
+#    driver: local
+#    driver_opts:
+#      type: none
+#      o: bind
+#      device: /opt/services/story-monitoring/volumes/grafana_disk
   pg_grafana:
     driver: local
     driver_opts:
