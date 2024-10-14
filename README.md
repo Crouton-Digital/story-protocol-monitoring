@@ -18,8 +18,6 @@ Edit docker-compose.yml, need enter you validator address and node rpc url
   story-validator-exporter:
     image: ghcr.io/crouton-digital/story-validator-exporter:v0.12.2
     container_name: cosmos-validator-watcher
-    labels:
-      network: "mainnet"
     command: >
       --log-level debug
       --validator BAED8E3FAD9FD20457EA2AD53A631AFAA6477F3A:CroutonDigital  # Replace to your validator address 
@@ -52,8 +50,9 @@ Hardware health - system hardware metrics. cpu, ram, network usage
 ## Cleanup all container data
 ```bash 
 cd /opt/story-monitoring/
-docker-compose down
-docker volume prune -f
+sudo docker-compose down
+sudo docker volume prune -f
+sudo rm -rf /opt/story-monitoring/
 ```
 
 ## Reference list
