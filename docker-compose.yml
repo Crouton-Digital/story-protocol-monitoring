@@ -141,7 +141,7 @@ services:
       org.label-schema.group: "monitoring"
     depends_on:
       - pg_grafana
-      - prometheus
+      - story-prometheus
   pg_grafana:
     container_name: pg_grafana
     image: postgres:15
