@@ -849,6 +849,7 @@
           "editorMode": "code",
           "expr": "100 * \nsum(rate(cosmos_validator_watcher_validated_blocks{chain_id=\"$chain_id\"}[5m])) by (name)\n/ on(instance) group_left()\nsum(rate(cosmos_validator_watcher_tracked_blocks{chain_id=\"$chain_id\"}[5m]))",
           "instant": false,
+          "legendFormat": "{{name}}",
           "range": true,
           "refId": "A"
         }
@@ -1040,6 +1041,7 @@
           "editorMode": "code",
           "expr": "max(increase(cosmos_validator_watcher_block_height{chain_id=\"$chain_id\"}[10m])) by (chain_id) / 10",
           "instant": false,
+          "legendFormat": "{{chain_id}}",
           "range": true,
           "refId": "A"
         }
