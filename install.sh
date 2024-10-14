@@ -8,6 +8,6 @@ git clone https://github.com/Crouton-Digital/story-monitoring.git
 cd story-monitoring
 
 mkdir ./volumes/prometheus_disk
-chown nobody:nogroup ./volumes/prometheus_disk
+chown 65534:65534 ./volumes/prometheus_disk
 
 docker compose up -d
