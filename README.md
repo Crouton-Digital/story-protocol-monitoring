@@ -51,3 +51,10 @@ Validator stats - information about validator such as rank, bounded tokens, comi
 
 Hardware health - system hardware metrics. cpu, ram, network usage  
 ![dashboard02.png](docs%2Fimages%2Fdashboard02.png)  
+
+## Cleanup all container data
+```bash 
+cd /opt/story-monitoring/
+docker-compose down
+docker volume prune -f
+```
