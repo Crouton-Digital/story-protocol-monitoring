@@ -241,7 +241,8 @@
                 "value": null
               }
             ]
-          }
+          },
+          "unit": "short"
         },
         "overrides": []
       },
@@ -945,6 +946,7 @@
           "editorMode": "code",
           "expr": "max(increase(cosmos_validator_watcher_solo_missed_blocks{chain_id=\"$chain_id\"}[30s])) by (name)",
           "instant": false,
+          "legendFormat": "{{name}}",
           "range": true,
           "refId": "A"
         }
