@@ -10,7 +10,7 @@ datasources:
     isDefault: true
     access: proxy
     orgId: 1
-    url: http://prometheus:9090
+    url: http://story-prometheus:9090
     version: 1
     editable: true
     jsonData:
