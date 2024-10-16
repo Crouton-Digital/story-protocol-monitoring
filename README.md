@@ -47,6 +47,61 @@ Validator stats - information about validator such as rank, bounded tokens, comi
 Hardware health - system hardware metrics. cpu, ram, network usage  
 ![dashboard02.png](docs%2Fimages%2Fdashboard02.png)  
 
+### Alerting configuration
+
+Goto Home -> Alerting -> Contact Point and press "Add contact point"  
+
+![ContactPoint_01.png](docs%2Fimages%2FContactPoint_01.png)
+
+```bash 
+{{ template "telegram.message" . }}
+```
+Press "Save contact point" button
+
+On Notification templates Press "Add template" button 
+
+Enter name: temp.messages
+
+content paste: 
+```bash 
+{{ define "telegram.print_alert" -}}
+[{{.Status}}] {{ .Labels.alertname }}
+{{ if .Annotations -}}
+Annotations:
+{{ range .Annotations.SortedPairs -}}
+- {{ .Name }}: {{ .Value }}
+{{ end -}}
+{{ end -}}
+{{ if .DashboardURL -}}
+  Go to dashboard: {{ .DashboardURL }}
+{{- end }}
+{{- end }}
+
+{{ define "telegram.message" -}}
+{{ if .Alerts.Firing -}}
+{{ len .Alerts.Firing }} firing alert(s):
+{{ range .Alerts.Firing }}
+{{ template "telegram.print_alert" . }}
+{{ end -}}
+{{ end }}
+{{ if .Alerts.Resolved -}}
+{{ len .Alerts.Resolved }} resolved alert(s):
+{{ range .Alerts.Resolved }}
+{{ template "telegram.print_alert" .}}
+{{ end -}}
+{{ end }}
+{{- end }}
+```
+For save press "Save template" button  
+
+Goto Home -> Alerting -> Notification policies and press "New nested policy"  
+
+![Notifypolicy_01.png](docs%2Fimages%2FNotifypolicy_01.png)  
+
+and fill in all the fields as in the example below:  
+![Notifypolicy_02.png](docs%2Fimages%2FNotifypolicy_02.png)  
+for save changes press "Save policy" button  
+
 ## Cleanup all container data
 ```bash 
 cd /opt/story-monitoring/
