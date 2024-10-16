@@ -121,6 +121,8 @@ services:
     volumes:
       - ./volumes/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
       - ./volumes/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+      - ./volumes/grafana/provisioning/alerting:/etc/grafana/provisioning/alerting
+      - ./volumes/grafana/provisioning/notifiers:/etc/grafana/provisioning/notifiers
       - ./volumes/grafana/dashboards:/var/lib/grafana/dashboards
     environment:
       - GF_AUTH_BASIC_ENABLED=true

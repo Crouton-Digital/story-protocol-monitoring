@@ -1,0 +1,16 @@
+apiVersion: 1
+contactPoints:
+  - orgId: 1
+    name: Telegram
+    receivers:
+      - uid: ac1534fe-ff41-465e-ae7d-c76d1c1ef71f
+        type: telegram
+        settings:
+          bottoken: 712056413:AAGDVTXIpwEkVGuIzR0iuTFVIwGv7FKHl
+          chatid: "-416602123"
+          disable_notification: false
+          disable_web_page_preview: false
+          message: '{{ template "slack.message" . }}'
+          parse_mode: None
+          protect_content: false
+        disableResolveMessage: false
