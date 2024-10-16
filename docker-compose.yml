@@ -3,7 +3,7 @@ name: monitoring
 
 services:
   story-validator-exporter:
-    image: ghcr.io/crouton-digital/story-validator-exporter:v0.12.2
+    image: ghcr.io/crouton-digital/story-validator-exporter:v0.12.4
     container_name: cosmos-validator-watcher
     command: >
       --log-level debug
